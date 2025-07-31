@@ -1,0 +1,128 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  /**
+   * Tailwind CSS theme
+   * tailwind.config.ts expects the following color variables to be expressed as HSL values.
+   * A different format will require also updating the theme in tailwind.config.ts.
+  */
+  :root {
+    --background: 0 0% 100%;
+    --foreground: 215 27% 17%;
+
+    --card: 0 0% 100%;
+    --card-foreground: 215 27% 17%;
+
+    --popover: 0 0% 100%;
+    --popover-foreground: 215 27% 17%;
+
+    --primary: 200 95% 45%;
+    --primary-foreground: 0 0% 100%;
+
+    --secondary: 45 29% 85%;
+    --secondary-foreground: 215 27% 17%;
+
+    --muted: 45 15% 95%;
+    --muted-foreground: 215 15% 55%;
+
+    --accent: 165 60% 75%;
+    --accent-foreground: 215 27% 17%;
+
+    --destructive: 0 84.2% 60.2%;
+    --destructive-foreground: 0 0% 100%;
+
+    --border: 215 20% 90%;
+    --input: 215 20% 95%;
+    --ring: 200 95% 45%;
+
+    --radius: 0.75rem;
+
+    /* Travel-specific colors */
+    --travel-sky: 200 95% 45%;
+    --travel-sand: 45 29% 85%;
+    --travel-mint: 165 60% 75%;
+    --travel-ocean: 210 85% 35%;
+    --travel-sunset: 25 95% 65%;
+
+    --sidebar-background: 0 0% 98%;
+
+    --sidebar-foreground: 240 5.3% 26.1%;
+
+    --sidebar-primary: 240 5.9% 10%;
+
+    --sidebar-primary-foreground: 0 0% 98%;
+
+    --sidebar-accent: 240 4.8% 95.9%;
+
+    --sidebar-accent-foreground: 240 5.9% 10%;
+
+    --sidebar-border: 220 13% 91%;
+
+    --sidebar-ring: 217.2 91.2% 59.8%;
+  }
+
+  .dark {
+    --background: 215 30% 8%;
+    --foreground: 0 0% 95%;
+
+    --card: 215 30% 10%;
+    --card-foreground: 0 0% 95%;
+
+    --popover: 215 30% 10%;
+    --popover-foreground: 0 0% 95%;
+
+    --primary: 200 95% 55%;
+    --primary-foreground: 215 30% 8%;
+
+    --secondary: 215 25% 15%;
+    --secondary-foreground: 0 0% 95%;
+
+    --muted: 215 25% 15%;
+    --muted-foreground: 215 15% 65%;
+
+    --accent: 165 50% 45%;
+    --accent-foreground: 0 0% 95%;
+
+    --destructive: 0 75% 55%;
+    --destructive-foreground: 0 0% 95%;
+
+    --border: 215 25% 20%;
+    --input: 215 25% 20%;
+    --ring: 200 95% 55%;
+
+    /* Travel-specific colors for dark mode */
+    --travel-sky: 200 95% 55%;
+    --travel-sand: 45 25% 25%;
+    --travel-mint: 165 50% 45%;
+    --travel-ocean: 210 75% 25%;
+    --travel-sunset: 25 85% 55%;
+    --sidebar-background: 240 5.9% 10%;
+    --sidebar-foreground: 240 4.8% 95.9%;
+    --sidebar-primary: 224.3 76.3% 48%;
+    --sidebar-primary-foreground: 0 0% 100%;
+    --sidebar-accent: 240 3.7% 15.9%;
+    --sidebar-accent-foreground: 240 4.8% 95.9%;
+    --sidebar-border: 240 3.7% 15.9%;
+    --sidebar-ring: 217.2 91.2% 59.8%;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply bg-background text-foreground font-sans;
+  }
+
+  .hero-gradient {
+    background: linear-gradient(135deg, hsl(var(--travel-sky)) 0%, hsl(var(--travel-ocean)) 100%);
+  }
+
+  .section-gradient {
+    background: linear-gradient(180deg, hsl(var(--background)) 0%, hsl(var(--muted)) 100%);
+  }
+}
